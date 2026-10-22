@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polish Panda | Premium Car Wash &amp; Detailing Studio</title>
+  <meta name="description" content="Polish Panda is a premium car wash, detailing and fleet care studio. Foam washes, interior deep cleans, paint correction, ceramic coating and memberships — book online in under a minute.">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/favicon-512.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/images/hero.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================
+       ICON SPRITE (inline so it also works when opened via file://)
+       ========================================================== -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z" fill="currentColor"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s-6.5 7.2-6.5 12a6.5 6.5 0 0 0 13 0C18.5 10.2 12 3 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 15.5a2.5 2.5 0 0 0 2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3Z"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6"/></g></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></g></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><circle cx="5.5" cy="9.5" r="2.3"/><circle cx="18.5" cy="9.5" r="2.3"/><path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20M2 19v-1a3.6 3.6 0 0 1 4-3.6M22 19v-1a3.6 3.6 0 0 0-4-3.6"/></g></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5.5-13.5 15-14-.4 9.6-6 15-14 15"/><path d="M5 19c3-4 6-6.5 9.5-8.5"/></g></symbol>
+    <symbol id="i-phone-app" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3M9.5 10l2 2 3.5-3.5"/></g></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.5L7 21l5-2.5 5 2.5-1.5-7.5"/><path d="M10 9l1.5 1.5L14.5 7.5"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g><g fill="currentColor"><rect x="7" y="13" width="4.2" height="1.9" rx=".5"/><rect x="7" y="16.2" width="2.6" height="1.9" rx=".5"/><rect x="13.5" y="13" width="2.6" height="1.9" rx=".5"/></g></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4.5"/><path d="M11.2 11.8L20 3M16 7l2.5 2.5M18.5 4.5L21 7"/></g></symbol>
+    <symbol id="i-foam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"/><circle cx="15.5" cy="7.5" r="2.2"/><circle cx="16" cy="14" r="3.5"/><circle cx="7.5" cy="16.5" r="2.5"/></g></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16.5V13l2-5.2A2 2 0 0 1 6.9 6.5h10.2a2 2 0 0 1 1.9 1.3L21 13v3.5a1 1 0 0 1-1 1h-1.5M5.5 17.5H4a1 1 0 0 1-1-1M9 17.5h6"/><circle cx="7.2" cy="17.5" r="1.8"/><circle cx="16.8" cy="17.5" r="1.8"/><path d="M3.5 12.5h17"/></g></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.4M12 18.8v2.4M4.2 7.5l2.1 1.2M17.7 15.3l2.1 1.2M4.2 16.5l2.1-1.2M17.7 8.7l2.1-1.2"/><path d="M12 5.2a6.8 6.8 0 1 1 0 13.6 6.8 6.8 0 0 1 0-13.6Z"/></g></symbol>
+    <symbol id="i-wheel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3v6.6M12 14.4V21M3.4 9.2l6.3 2M14.3 12.8l6.3 2M5.6 18.5l4.6-4.6M13.8 10.1l4.6-4.6"/></g></symbol>
+    <symbol id="i-seat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h4.5a1.5 1.5 0 0 1 1.5 1.7l-1.3 9.3H8.6L7.6 5a1.8 1.8 0 0 1 1.4-2Z"/><path d="M6.5 14h11a1.5 1.5 0 0 1 1.5 1.5V18H5v-2.5A1.5 1.5 0 0 1 6.5 14ZM7 18v3M17 18v3"/></g></symbol>
+    <symbol id="i-car-spark" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18.5V15l1.7-4.2A1.8 1.8 0 0 1 6.9 9.6h10.2a1.8 1.8 0 0 1 1.7 1.2l1.7 4.2v3.5h-2M5.5 18.5h-2M9 18.5h6"/><circle cx="7.2" cy="18.5" r="1.6"/><circle cx="16.8" cy="18.5" r="1.6"/><path d="M4 15h16M12 2.5l.7 1.8 1.8.7-1.8.7L12 7.5l-.7-1.8-1.8-.7 1.8-.7L12 2.5ZM19 3.5l.4 1 1 .4-1 .4-.4 1-.4-1-1-.4 1-.4.4-1ZM5 4l.4 1 1 .4-1 .4L5 6.8l-.4-1-1-.4 1-.4L5 4Z"/></g></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12a7.5 7.5 0 0 1-13 5.1M4.5 12a7.5 7.5 0 0 1 13-5.1"/><path d="M17.5 3.5v3.4h-3.4M6.5 20.5v-3.4h3.4"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z" fill="currentColor"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M4 18.5V13c0-4.3 2-7.2 6-8.5l.8 1.8C8.4 7.4 7.4 9 7.3 11.2H10v7.3H4Zm10 0V13c0-4.3 2-7.2 6-8.5l.8 1.8c-2.4 1.1-3.4 2.7-3.5 4.9H20v7.3h-6Z" fill="currentColor"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.3l1.7 4.3-2.2 1.4a11 11 0 0 0 7 7l1.4-2.2 4.3 1.7V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-handle" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.5 21v-7.5H16l.5-3h-3V8.7c0-.9.3-1.6 1.6-1.6h1.6V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-3.8 1.4-3.8 4v2.2H7.8v3h2.7V21h3Z" fill="currentColor"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z" fill="currentColor"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.7-1.2A9 9 0 1 0 12 3Zm4.6 12.6c-.2.6-1.1 1.1-1.6 1.2-.4 0-.9.1-2.9-.7-2.5-1-4-3.5-4.1-3.7-.1-.2-1-1.3-1-2.5s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2Z" fill="currentColor"/></symbol>
+  </svg>
+
+  <!-- ==========================================================
+       NAVBAR
+       ========================================================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="logo logo--badge" aria-label="Polish Panda home">
+        <img class="logo__badge" src="assets/images/hub/logo-fps-512.png" alt="Forward Prime Solutions" width="512" height="512">
+     
+      </a>
+
+      <nav class="nav__menu" aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#home" class="nav__link is-active">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#hub" class="nav__link">Polish Panda</a></li>
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#gallery" class="nav__link">Gallery</a></li>
+          <li><a href="#process" class="nav__link">Process</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <span class="nav__indicator" aria-hidden="true"></span>
+      </nav>
+
+      <!-- Dashboard link: change href to your dashboard URL -->
+      <a class="btn btn--primary btn--sm nav__cta" href="login.html">
+        Go to Dashboard <svg class="icon"><use href="#i-arrow-right"/></svg>
+      </a>
+
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+      <!-- Fixed social bar (stays on screen while scrolling): update the href values with your real profile URLs -->
+      <ul class="hero__social" data-hero-anim style="--d:5" aria-label="Follow us">
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon"><use href="#i-facebook"/></svg></a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use href="#i-youtube"/></svg></a></li>
+        <li><a href="https://wa.me/15550142290" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg></a></li>
+        <li class="hero__social-label" aria-hidden="true">Follow Us</li>
+      </ul>
+
+  <!-- Mobile menu -->
+  <div class="mmenu" id="mobileMenu" aria-hidden="true">
+    <div class="mmenu__overlay" data-close-menu></div>
+    <aside class="mmenu__panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <div class="mmenu__head">
+       <a href="#home" class="logo logo--badge" aria-label="Polish Panda home">
+        <img class="logo__badge" src="assets/images/hub/logo-fps-512.png" alt="Forward Prime Solutions" width="512" height="512">
+     
+      </a>
+        <button class="mmenu__close" type="button" aria-label="Close menu" data-close-menu>
+          <svg class="icon"><use href="#i-close"/></svg>
+        </button>
+      </div>
+      <ul class="mmenu__links">
+        <li ><a href="#home" data-close-menu><span>01</span>Home</a></li>
+        <li ><a href="#about" data-close-menu><span>02</span>About</a></li>
+        
+        <li ><a href="#hub" data-close-menu><span>03</span>Polish Panda</a></li>
+        <li ><a href="#services" data-close-menu><span>04</span>Services</a></li>
+        <li ><a href="#gallery" data-close-menu><span>05</span>Gallery</a></li>
+        <li ><a href="#process" data-close-menu><span>06</span>Process</a></li>
+        <li ><a href="#testimonials" data-close-menu><span>07</span>Reviews</a></li>
+        <li ><a href="#contact" data-close-menu><span>08</span>Contact</a></li>
+      </ul>
+      <div class="mmenu__foot" >
+        <a class="btn btn--primary btn--block" href="login.html">
+          Go to Dashboard <svg class="icon"><use href="#i-arrow-right"/></svg>
+        </a>
+       
+      </div>
+    </aside>
+  </div>
+
+  <main>
+
+    <!-- ==========================================================
+         HERO  — set data-hero-media="video" or "image"
+         ========================================================== -->
+    <section class="hero" id="home" data-hero-media="video">
+      <div class="hero__media" data-parallax="0.25">
+        <img class="hero__image" src="assets/images/hero.jpg" alt="" width="2000" height="1333">
+        <video class="hero__video" id="heroVideo" muted loop playsinline preload="metadata" poster="assets/images/hero.jpg">
+          <source src="assets/videos/hero1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow" data-hero-anim style="--d:0">Wash <i></i> Detail <i></i> Protect</p>
+          <h1 class="hero__title">
+            <span class="line"><span data-hero-anim style="--d:1">Premium Care</span></span>
+            <span class="line"><span data-hero-anim style="--d:2">For Every <span class="text-red">Drive.</span></span></span>
+          </h1>
+          <p class="hero__text" data-hero-anim style="--d:3">
+            Showroom-grade washing, detailing and paint protection, with online booking and live status updates on every visit.
+          </p>
+          <ul class="hero__features" data-hero-anim style="--d:5">
+            <li><span class="hero__ficon"><svg class="icon"><use href="#i-leaf"/></svg></span><span><strong>Eco-Safe</strong>Products</span></li>
+            <li><span class="hero__ficon"><svg class="icon"><use href="#i-shield"/></svg></span><span><strong>Certified</strong>Detailers</span></li>
+            <li><span class="hero__ficon"><svg class="icon"><use href="#i-team"/></svg></span><span><strong>Trusted by</strong>25K+ Drivers</span></li>
+          </ul>
+        </div>
+
+
+        <button class="hero__badge spin-badge" type="button" data-open-video aria-label="Play studio video" data-hero-anim style="--d:6">
+          <svg viewBox="0 0 120 120" class="spin-badge__text" aria-hidden="true">
+            <defs><path id="badgeCircle" d="M60 60m-49 0a49 49 0 1 1 98 0a49 49 0 1 1-98 0"/></defs>
+            <text><textPath href="#badgeCircle">SPOT FREE SHINE &#8226; EVERY SINGLE TIME &#8226; </textPath></text>
+          </svg>
+          <img src="assets/images/service-hand-wash.jpg" alt="" class="spin-badge__img">
+          <span class="spin-badge__play"><svg class="icon"><use href="#i-play"/></svg></span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ==========================================================
+         ABOUT / WHY US
+         ========================================================== -->
+    <section class="section section--light about" id="about">
+      <span class="slash slash--about" aria-hidden="true"></span>
+      <div class="container about__grid">
+        <div class="about__content" data-stagger>
+          <p class="eyebrow" data-reveal>About Us</p>
+          <h2 class="title" data-reveal>More Than<br><span class="text-red">A Car Wash</span> Studio.</h2>
+          <p class="lead" data-reveal>
+            Polish Panda combines skilled detailers, professional-grade chemistry and a smart booking system. Drivers and fleet managers get a consistent finish, every visit, on schedule.
+          </p>
+          <ul class="checklist" data-reveal>
+            <li><svg class="icon"><use href="#i-check"/></svg> pH-neutral, paint-safe products</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Real-time status updates by SMS</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Water recycling on every wash bay</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Fleet &amp; membership management</li>
+          </ul>
+          <div class="stats" data-reveal>
+            <div class="stat">
+              <strong><span data-count="12">0</span>+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="stat">
+              <strong><span data-count="25">0</span>K+</strong>
+              <span>Cars Cleaned</span>
+            </div>
+            <div class="stat">
+              <strong><span data-count="4.9" data-decimals="1">0</span>★</strong>
+              <span>Average Rating</span>
+            </div>
+          </div>
+          <a href="#services" class="btn btn--primary" data-reveal>
+            Explore Services <svg class="icon"><use href="#i-arrow-right"/></svg>
+          </a>
+        </div>
+
+        <div class="about__collage">
+          <figure class="collage collage--main" data-reveal="clip" data-parallax="-0.06">
+            <img src="assets/images/about-main.jpg" alt="Freshly detailed white Mercedes in a red-lit studio bay" loading="lazy" width="1100" height="900">
+            <button class="collage__play" type="button" data-open-video aria-label="Play studio video">
+              <svg class="icon"><use href="#i-play"/></svg>
+            </button>
+          </figure>
+          <div class="collage collage--tile" data-reveal="clip" style="--rd:.15s">
+            <svg class="icon"><use href="#i-sparkle"/></svg>
+            <p>Driven by<br>detail</p>
+          </div>
+          <figure class="collage collage--small" data-reveal="clip" style="--rd:.3s" data-parallax="0.05">
+            <img src="assets/images/about-detail.jpg" alt="Close-up of a polished headlight" loading="lazy" width="700" height="600">
+          </figure>
+          <span class="collage__bar" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         POLISH PANDA AUTO HUB
+         ========================================================== -->
+    <section class="section section--dark hub sheet" id="hub">
+      <!-- Storefront photo: replace assets/images/hub/storefront.jpg with your own -->
+      <div class="hub__photo" aria-hidden="true">
+        <img src="assets/images/hub/storefront.jpg" alt="" loading="lazy" data-parallax="0.06">
+      </div>
+      <div class="hub__shade" aria-hidden="true"></div>
+
+      <div class="hub__brand-badge" data-reveal="zoom">
+        <img class="hub__badge" src="assets/images/hub/polish-panda-badge.png" alt="" >
+        
+      </div>
+
+      <div class="container hub__inner">
+        <div class="hub__content" data-stagger>
+          
+
+          <p class="hub__eyebrow" data-reveal>Car Wash &amp; Detailing Studio</p>
+          <h2 class="hub__title" data-reveal>Premium Automotive<br><span class="text-red">Experience Hub.</span></h2>
+          <p class="hub__text" data-reveal>
+            POLISH PANDA is a technology-led, customer-centric automotive destination in Mundakkayam serving both four-wheelers and two-wheelers with professional car wash and detailing services.
+          </p>
+
+          <ul class="hub__features" data-reveal>
+            <li><span><svg class="icon"><use href="#i-drop"/></svg></span>Premium<br>Car Wash</li>
+            <li><span><svg class="icon"><use href="#i-car-spark"/></svg></span>Professional<br>Detailing</li>
+            <li><span><svg class="icon"><use href="#i-gear"/></svg></span>Advanced<br>Equipment</li>
+            <li><span><svg class="icon"><use href="#i-shield"/></svg></span>Expert<br>Care</li>
+          </ul>
+
+          <div class="hub__actions" data-reveal>
+            <a href="#services" class="btn btn--primary hub__btn">
+              View Services <svg class="icon"><use href="#i-arrow-right"/></svg>
+            </a>
+            <p class="hub__tagline">Cleaner Today <i>|</i> Brighter Tomorrow</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service tiles: each one opens the booking form with that service selected -->
+      <ul class="hub__tiles" data-reveal="up">
+          <li class="hub__tile" style="--i:0">
+            <button type="button" >
+              <img src="assets/images/hub/tile-car-wash.jpg" alt="" loading="lazy">
+              <span class="hub__tile-label"><svg class="icon"><use href="#i-drop"/></svg>Car Wash</span>
+            </button>
+          </li>
+          <li class="hub__tile" style="--i:1">
+            <button type="button" >
+              <img src="assets/images/hub/tile-paint-detailing.jpg" alt="" loading="lazy">
+              <span class="hub__tile-label"><svg class="icon"><use href="#i-sparkle"/></svg>Paint Detailing</span>
+            </button>
+          </li>
+          <li class="hub__tile" style="--i:2">
+            <button type="button" >
+              <img src="assets/images/hub/tile-tyre-wheel.jpg" alt="" loading="lazy">
+              <span class="hub__tile-label"><svg class="icon"><use href="#i-wheel"/></svg>Tyre &amp; Wheel Care</span>
+            </button>
+          </li>
+          <li class="hub__tile" style="--i:3">
+            <button type="button" >
+              <img src="assets/images/hub/tile-interior.jpg" alt="" loading="lazy">
+              <span class="hub__tile-label"><svg class="icon"><use href="#i-seat"/></svg>Interior Cleaning</span>
+            </button>
+          </li>
+          <li class="hub__tile" style="--i:4">
+            <button type="button" >
+              <img src="assets/images/hub/tile-ceramic.jpg" alt="" loading="lazy">
+              <span class="hub__tile-label"><svg class="icon"><use href="#i-shield"/></svg>Ceramic Coating</span>
+            </button>
+          </li>
+      </ul>
+    </section>
+
+    <!-- ==========================================================
+         SERVICES + SERVICE CAROUSEL
+         ========================================================== -->
+    <section class="section section--dark services sheet" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div data-stagger>
+            <p class="eyebrow" data-reveal>Our Services</p>
+            <h2 class="title" data-reveal>Everything Your Car<br>Needs to <span class="text-red">Shine.</span></h2>
+          </div>
+          <div class="section-head__side" data-reveal>
+            <p>From a quick foam wash to multi-year ceramic protection, every service is carried out by trained detailers in climate-controlled bays.</p>
+            <div class="carousel-nav">
+              <button class="round-btn" type="button" data-carousel-prev="services" aria-label="Previous services"><svg class="icon"><use href="#i-arrow-left"/></svg></button>
+              <button class="round-btn round-btn--red" type="button" data-carousel-next="services" aria-label="Next services"><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service categories (filter the carousel) -->
+        <div class="chips" role="tablist" aria-label="Filter services" data-reveal>
+          <button class="chip is-active" type="button" role="tab" aria-selected="true" data-filter="all"><svg class="icon"><use href="#i-sparkle"/></svg> All Services</button>
+          <button class="chip" type="button" role="tab" aria-selected="false" data-filter="wash"><svg class="icon"><use href="#i-foam"/></svg> Wash</button>
+          <button class="chip" type="button" role="tab" aria-selected="false" data-filter="interior"><svg class="icon"><use href="#i-car"/></svg> Interior</button>
+          <button class="chip" type="button" role="tab" aria-selected="false" data-filter="detailing"><svg class="icon"><use href="#i-drop"/></svg> Detailing</button>
+          <button class="chip" type="button" role="tab" aria-selected="false" data-filter="protection"><svg class="icon"><use href="#i-shield"/></svg> Protection</button>
+        </div>
+
+        <div class="carousel" data-carousel="services">
+          <div class="carousel__track" tabindex="0" aria-label="Services carousel">
+            <article class="service-card" data-category="wash">
+              <img src="assets/images/service-exterior.jpg" alt="Pressure washing a black BMW" loading="lazy" width="800" height="600">
+              <div class="service-card__body">
+                <span class="service-card__num">01</span>
+                <h3>Exterior Foam Wash</h3>
+                <p>Snow-foam pre-wash, contact wash and spot-free rinse.</p>
+
+              </div>
+              <button class="service-card__btn" type="button" ><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </article>
+            <article class="service-card" data-category="wash">
+              <img src="assets/images/service-hand-wash.jpg" alt="Detailer hand washing a car with foam" loading="lazy" width="800" height="600">
+              <div class="service-card__body">
+                <span class="service-card__num">02</span>
+                <h3>Hand Wash &amp; Dry</h3>
+                <p>Two-bucket method with plush microfibre drying.</p>
+
+              </div>
+              <button class="service-card__btn" type="button" ><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </article>
+            <article class="service-card" data-category="interior">
+              <img src="assets/images/service-interior.jpg" alt="Clean car dashboard and interior" loading="lazy" width="800" height="600">
+              <div class="service-card__body">
+                <span class="service-card__num">03</span>
+                <h3>Interior Deep Clean</h3>
+                <p>Vacuum, steam, upholstery shampoo and odour treatment.</p>
+            
+              </div>
+              <button class="service-card__btn" type="button" ><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </article>
+            <article class="service-card" data-category="detailing">
+              <img src="assets/images/service-detailing.jpg" alt="Detailer restoring a headlight" loading="lazy" width="800" height="600">
+              <div class="service-card__body">
+                <span class="service-card__num">04</span>
+                <h3>Paint Correction</h3>
+                <p>Machine polishing that removes swirls and light scratches.</p>
+
+              </div>
+              <button class="service-card__btn" type="button" ><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </article>
+            <article class="service-card" data-category="detailing">
+              <img src="assets/images/service-wheels.jpg" alt="Technician cleaning an alloy wheel" loading="lazy" width="800" height="600">
+              <div class="service-card__body">
+                <span class="service-card__num">05</span>
+                <h3>Wheel &amp; Tyre Care</h3>
+                <p>Iron-fallout removal, barrel clean and tyre dressing.</p>
+           
+              </div>
+              <button class="service-card__btn" type="button" ><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </article>
+            <article class="service-card" data-category="protection">
+              <img src="assets/images/service-ceramic.jpg" alt="Glossy red supercar with ceramic coating" loading="lazy" width="800" height="600">
+              <div class="service-card__body">
+                <span class="service-card__num">06</span>
+                <h3>Ceramic Coating</h3>
+                <p>Up to 5 years of hydrophobic gloss and UV protection.</p>
+            
+              </div>
+              <button class="service-card__btn" type="button" ><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </article>
+            <article class="service-card" data-category="protection">
+              <img src="assets/images/service-fleet.jpg" alt="Black car in a warehouse after protection treatment" loading="lazy" width="1000" height="700">
+              <div class="service-card__body">
+                <span class="service-card__num">07</span>
+                <h3>Fleet Care Program</h3>
+                <p>Scheduled washes, reporting and one invoice for your fleet.</p>
+                <span class="service-card__price">Custom pricing</span>
+              </div>
+              <button class="service-card__btn" type="button" ><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </article>
+          </div>
+          <div class="carousel__progress" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         WHY CHOOSE OUR CAR WASH
+         ========================================================== -->
+    <section class="section section--light why sheet" id="why">
+      <!-- Corner photo: replace assets/images/why/hero-car.jpg -->
+      <div class="why__corner" aria-hidden="true"><img src="assets/images/why/hero-car.jpg" alt="" loading="lazy"></div>
+      <div class="container">
+        <div class="why__head">
+          <div data-stagger>
+            <p class="eyebrow" data-reveal>Why Choose Us</p>
+            <h2 class="title" data-reveal>Experience<br>the <span class="text-red">Difference.</span></h2>
+          </div>
+          <p class="why__lead" data-reveal>Quality, trust and a well-run operation behind every wash. We treat each vehicle as if it were our own and track it from check-in to handover.</p>
+        </div>
+        <div class="why__grid">
+          <article class="feature">
+            <div class="feature__top">
+              <span class="feature__icon"><svg class="icon"><use href="#i-team"/></svg></span>
+              <span class="feature__num">01</span>
+            </div>
+            <h3>Certified Detailers</h3>
+            <p>IDA-trained team with 10,000+ hours of hands-on paint care.</p>
+            <div class="feature__media"><img src="assets/images/why/certified-detailers.jpg" alt="Detailer machine-polishing a black car" loading="lazy"></div>
+           
+          </article>
+          <article class="feature">
+            <div class="feature__top">
+              <span class="feature__icon"><svg class="icon"><use href="#i-leaf"/></svg></span>
+              <span class="feature__num">02</span>
+            </div>
+            <h3>Eco Water Recycling</h3>
+            <p>Up to 80% of wash water is filtered and reused on site.</p>
+            <div class="feature__media"><img src="assets/images/why/eco-water.jpg" alt="Water recycling tank filtering wash water" loading="lazy"></div>
+            
+          </article>
+          <article class="feature">
+            <div class="feature__top">
+              <span class="feature__icon"><svg class="icon"><use href="#i-phone-app"/></svg></span>
+              <span class="feature__num">03</span>
+            </div>
+            <h3>Smart Booking</h3>
+            <p>Book in 60 seconds and get live SMS updates on your car.</p>
+            <div class="feature__media"><img src="assets/images/why/smart-booking.jpg" alt="Booking a car wash on a phone app" loading="lazy"></div>
+          
+          </article>
+          <article class="feature">
+            <div class="feature__top">
+              <span class="feature__icon"><svg class="icon"><use href="#i-shield"/></svg></span>
+              <span class="feature__num">04</span>
+            </div>
+            <h3>Shine Guarantee</h3>
+            <p>Not happy? We'll re-wash it free within 48 hours.</p>
+            <div class="feature__media"><img src="assets/images/why/shine-guarantee.jpg" alt="Glossy black car with red reflections" loading="lazy"></div>
+           
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         BEFORE & AFTER GALLERY
+         ========================================================== -->
+    <section class="section section--dark gallery sheet" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div data-stagger>
+            <p class="eyebrow" data-reveal>Our Showcase</p>
+            <h2 class="title" data-reveal>Before &amp; <span class="text-red">After.</span></h2>
+          </div>
+          <div class="section-head__side" data-reveal>
+            <p>Same car, same spot. Drag across any photo to reveal the result, or open it full screen.</p>
+            <div class="carousel-nav">
+              <button class="round-btn" type="button" data-carousel-prev="gallery" aria-label="Previous gallery item"><svg class="icon"><use href="#i-arrow-left"/></svg></button>
+              <button class="round-btn round-btn--red" type="button" data-carousel-next="gallery" aria-label="Next gallery item"><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel" data-carousel="gallery">
+          <div class="carousel__track" tabindex="0" aria-label="Before and after gallery">
+            <!--
+              Each card compares the SAME vehicle from the SAME angle.
+              To swap photos, replace the files (or edit the two paths). Keep both images
+              the same size and framing so they line up exactly under the slider.
+            -->
+            <article class="ba-card" data-before="assets/images/before/range-rover-before.jpg" data-after="assets/images/after/range-rover-after.jpg" data-title="SUV Exterior Wash">
+              <div class="compare"></div>
+              <div class="ba-card__meta"><span>01</span><div><h3>SUV Exterior Wash</h3><p>Range Rover Sport · 1.5 hrs</p></div></div>
+            </article>
+            <article class="ba-card" data-before="assets/images/before/leather-interior-before.jpg" data-after="assets/images/after/leather-interior-after.jpg" data-title="Interior Deep Cleaning">
+              <div class="compare"></div>
+              <div class="ba-card__meta"><span>02</span><div><h3>Interior Deep Cleaning</h3><p>Leather interior · 3 hrs</p></div></div>
+            </article>
+            <article class="ba-card" data-before="assets/images/before/porsche-911-before.jpg" data-after="assets/images/after/porsche-911-after.jpg" data-title="Premium Detailing">
+              <div class="compare"></div>
+              <div class="ba-card__meta"><span>03</span><div><h3>Premium Detailing</h3><p>Porsche 911 GT3 · 6 hrs</p></div></div>
+            </article>
+            <article class="ba-card" data-before="assets/images/before/bmw-m5-before.jpg" data-after="assets/images/after/bmw-m5-after.jpg" data-title="Mud Removal">
+              <div class="compare"></div>
+              <div class="ba-card__meta"><span>04</span><div><h3>Mud Removal</h3><p>BMW M5 · 2 hrs</p></div></div>
+            </article>
+            <article class="ba-card" data-before="assets/images/before/hyundai-i30-before.jpg" data-after="assets/images/after/hyundai-i30-after.jpg" data-title="Paint Gloss Restore">
+              <div class="compare"></div>
+              <div class="ba-card__meta"><span>05</span><div><h3>Paint Gloss Restore</h3><p>Hyundai i30 N · 5 hrs</p></div></div>
+            </article>
+          </div>
+          <div class="carousel__progress" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         HOW IT WORKS
+         ========================================================== -->
+    <section class="section section--light process sheet" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div data-stagger>
+            <p class="eyebrow" data-reveal>How It Works</p>
+            <h2 class="title" data-reveal>Your Shine<br><span class="text-red">Made Simple.</span></h2>
+          </div>
+          <div class="section-head__side process__lead" data-reveal>
+            <p>From booking to handover, we keep every step quick and transparent so you can enjoy a spotless, well-maintained vehicle without the hassle.</p>
+          </div>
+        </div>
+
+        <ol class="steps" id="steps">
+          <li class="steps__line" aria-hidden="true">
+            <svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M0 40 C60 40 90 33 122 32 C170 30 210 31 260 40 C320 40 350 33 382 32 C430 30 470 31 520 40 C580 40 610 33 642 32 C690 30 730 31 780 40 C840 40 870 33 902 32 C950 30 985 26 994 40 C998 48 999 54 1000 60"/></svg>
+          </li>
+          <li class="step">
+            <span class="step__icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+            <span class="step__next" aria-hidden="true"><svg class="icon"><use href="#i-chevron"/></svg></span>
+            <article class="step__card">
+              <div class="step__body">
+                <span class="step__num" aria-hidden="true">01</span>
+                <h3>Book Online</h3>
+                <p>Pick a service, date and slot in under a minute.</p>
+                <span class="step__bar" aria-hidden="true"></span>
+              </div>
+              <div class="step__media"><img src="assets/images/process/step-1-book-online.png" alt="Booking a wash slot on a phone" loading="lazy"></div>
+            </article>
+          </li>
+          <li class="step">
+            <span class="step__icon"><svg class="icon"><use href="#i-key"/></svg></span>
+            <span class="step__next" aria-hidden="true"><svg class="icon"><use href="#i-chevron"/></svg></span>
+            <article class="step__card">
+              <div class="step__body">
+                <span class="step__num" aria-hidden="true">02</span>
+                <h3>Drop Off Your Car</h3>
+                <p>Quick check-in, or we collect it from your door.</p>
+                <span class="step__bar" aria-hidden="true"></span>
+              </div>
+              <div class="step__media"><img src="assets/images/process/step-2-drop-off.png" alt="Handing over car keys at check-in" loading="lazy"></div>
+            </article>
+          </li>
+          <li class="step">
+            <span class="step__icon"><svg class="icon"><use href="#i-sparkle"/></svg></span>
+            <span class="step__next" aria-hidden="true"><svg class="icon"><use href="#i-chevron"/></svg></span>
+            <article class="step__card">
+              <div class="step__body">
+                <span class="step__num" aria-hidden="true">03</span>
+                <h3>We Wash &amp; Detail</h3>
+                <p>Our experts work with premium products and full care.</p>
+                <span class="step__bar" aria-hidden="true"></span>
+              </div>
+              <div class="step__media"><img src="assets/images/process/step-3-wash-detail.png" alt="Detailer hand-washing a car with foam" loading="lazy"></div>
+            </article>
+          </li>
+          <li class="step">
+            <span class="step__icon"><svg class="icon"><use href="#i-car"/></svg></span>
+            <span class="step__next" aria-hidden="true"><svg class="icon"><use href="#i-chevron"/></svg></span>
+            <article class="step__card">
+              <div class="step__body">
+                <span class="step__num" aria-hidden="true">04</span>
+                <h3>Drive Away Shining</h3>
+                <p>Final inspection, then hand-over with a smile.</p>
+                <span class="step__bar" aria-hidden="true"></span>
+              </div>
+              <div class="step__media"><img src="assets/images/process/step-4-drive-away.png" alt="Freshly detailed black car ready for pickup" loading="lazy"></div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         TESTIMONIALS
+         ========================================================== -->
+    <section class="section section--dark testimonials sheet" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <div data-stagger>
+            <p class="eyebrow" data-reveal>Testimonials</p>
+            <h2 class="title" data-reveal>What Our<br><span class="text-red">Customers Say.</span></h2>
+          </div>
+          <div class="section-head__side" data-reveal>
+            <p>Trusted by daily drivers, enthusiasts and fleet operators across the city.</p>
+            <div class="carousel-nav">
+              <button class="round-btn" type="button" data-carousel-prev="reviews" aria-label="Previous review"><svg class="icon"><use href="#i-arrow-left"/></svg></button>
+              <button class="round-btn round-btn--red" type="button" data-carousel-next="reviews" aria-label="Next review"><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel" data-carousel="reviews" data-autoplay="6000">
+          <div class="carousel__track" tabindex="0" aria-label="Customer reviews">
+            <article class="review">
+              <svg class="review__quote"><use href="#i-quote"/></svg>
+              <p>The foam wash and interior clean were spotless. Booking took a minute and I got a text the moment my car was ready.</p>
+              <footer class="review__author">
+                <span class="avatar">AM</span>
+                <div><strong>Arjun Menon</strong><small>Premium Gloss Member</small></div>
+                <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+              </footer>
+            </article>
+            <article class="review">
+              <svg class="review__quote"><use href="#i-quote"/></svg>
+              <p>They removed years of swirl marks from my black sedan. It looks better than the day I bought it. Worth every penny.</p>
+              <footer class="review__author">
+                <span class="avatar">ST</span>
+                <div><strong>Sarah Thomas</strong><small>Paint Correction</small></div>
+                <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+              </footer>
+            </article>
+            <article class="review">
+              <svg class="review__quote"><use href="#i-quote"/></svg>
+              <p>We moved our 40-vehicle fleet to Polish Panda. Scheduling, reporting and invoicing are now completely hands-off.</p>
+              <footer class="review__author">
+                <span class="avatar">RN</span>
+                <div><strong>Rahul Nair</strong><small>Fleet Manager</small></div>
+                <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+              </footer>
+            </article>
+            <article class="review">
+              <svg class="review__quote"><use href="#i-quote"/></svg>
+              <p>The ceramic coating is unreal. Rain just slides off and a quick rinse makes it look freshly detailed again.</p>
+              <footer class="review__author">
+                <span class="avatar">DP</span>
+                <div><strong>Divya Pillai</strong><small>Ceramic Coating</small></div>
+                <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+              </footer>
+            </article>
+            <article class="review">
+              <svg class="review__quote"><use href="#i-quote"/></svg>
+              <p>Friendly team, a spotless lounge and they really pay attention. My SUV's interior smells brand new.</p>
+              <footer class="review__author">
+                <span class="avatar">KJ</span>
+                <div><strong>Kevin Joseph</strong><small>Interior Deep Clean</small></div>
+                <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+              </footer>
+            </article>
+            <article class="review">
+              <svg class="review__quote"><use href="#i-quote"/></svg>
+              <p>The monthly membership is great value. I pop in every week and the car always looks showroom-fresh.</p>
+              <footer class="review__author">
+                <span class="avatar">MK</span>
+                <div><strong>Meera Krishnan</strong><small>Express Member</small></div>
+                <span class="stars" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+              </footer>
+            </article>
+          </div>
+          <div class="carousel__dots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CTA + CONTACT
+         ========================================================== -->
+    <section class="cta" id="contact">
+      <div class="cta__bg" data-parallax="0.18">
+        <img src="assets/images/cta.jpg" alt="" loading="lazy" width="2000" height="1000">
+      </div>
+      <div class="cta__shade" aria-hidden="true"></div>
+      <div class="container cta__inner">
+        <div class="cta__content" data-stagger>
+          <p class="eyebrow" data-reveal>Book Today</p>
+          <h2 class="title title--xl" data-reveal>Ready for That<br><span class="text-red">Showroom Shine?</span></h2>
+          <p class="lead" data-reveal>Reserve a slot online or speak to our team. Most bookings are confirmed within 15 minutes.</p>
+          <div class="cta__actions" data-reveal>
+            
+            <a class="btn btn--ghost" href="tel: +91 9496465672"><svg class="icon"><use href="#i-phone"/></svg> Call Us</a>
+          </div>
+        </div>
+
+        <ul class="contact-cards" data-stagger>
+          <li class="contact-card" data-reveal="up">
+            <svg class="icon"><use href="#i-pin"/></svg>
+            <div><small>Visit Us</small><a href="https://maps.app.goo.gl/M2nCHSrbyhAJaWDf7" target="_blank" rel="noopener">Forward Prime Solutions PVT. LTD.
+Polish Panda Auto Hub,
+Paingana, Mundakkayam,
+Kottayam.</a></div>
+          </li>
+          <li class="contact-card" data-reveal="up">
+            <svg class="icon"><use href="#i-phone"/></svg>
+            <div><small>Call Us</small><a href="tel:+91 9496465672"> +91 9496465672</a></div>
+          </li>
+          <li class="contact-card" data-reveal="up">
+            <svg class="icon"><use href="#i-mail"/></svg>
+            <div><small>Email</small><a href="mailto:forwardps@outlook.com">forwardps@outlook.com</a></div>
+          </li>
+          <li class="contact-card" data-reveal="up">
+            <svg class="icon"><use href="#i-clock"/></svg>
+            <div><small>Open Daily</small><span>8:00 AM – 8:00 PM</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <a href="#home" class="logo">
+        <img class="logo__badge" src="assets/images/hub/logo-fps-512.png" alt="Forward Prime Solutions" width="100px" >
+      </a>
+<ul class="nav__links">
+          <li><a href="#home" class="nav__link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#hub" class="nav__link">Polish Panda</a></li>
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#gallery" class="nav__link">Gallery</a></li>
+          <li><a href="#process" class="nav__link">Process</a></li>
+          <li><a href="#contact" class="nav__link is-active">Contact</a></li>
+        </ul>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon"><use href="#i-facebook"/></svg></a></li>
+        <li><a href="https://www.instagram.com/polishpanda_autospa/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use href="#i-youtube"/></svg></a></li>
+        <li><a href="https://wa.me/15550142290" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg></a></li>
+      </ul>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; <span id="year">2026</span> FORWARD PRIME SOLUTIONS. All rights reserved.</p>
+      <p class="footer__tags">Designed By : <a href="https://attechinfoasis.in/">attechinfoasis</a></p>
+    </div>
+    <button class="to-top" id="toTop" type="button" aria-label="Back to top"><svg class="icon"><use href="#i-arrow-up"/></svg></button>
+  </footer>
+
+  <!-- ==========================================================
+       MODALS
+       ========================================================== -->
+
+  <!-- Booking modal -->
+  <div class="modal" id="bookingModal" aria-hidden="true">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--form" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button class="modal__close" type="button" aria-label="Close booking form" data-close-modal><svg class="icon"><use href="#i-close"/></svg></button>
+
+      <div class="booking" id="bookingFormWrap">
+        <p class="eyebrow">Book a Wash</p>
+        <h2 class="booking__title" id="bookingTitle">Reserve Your <span class="text-red">Slot.</span></h2>
+        <!-- Set data-endpoint to your API/form URL (e.g. Formspree). Leave empty to send via the visitor's email app. -->
+        <form class="form" id="bookingForm" novalidate data-endpoint="" data-email="bookings@polishpanda.com">
+          <div class="form__row">
+            <label class="field">
+              <span>Full Name *</span>
+              <input type="text" name="name" autocomplete="name" required placeholder="John Carter">
+              <em class="field__error">Please enter your name.</em>
+            </label>
+            <label class="field">
+              <span>Phone *</span>
+              <input type="tel" name="phone" autocomplete="tel" required placeholder="+1 555 000 0000" pattern="[0-9+()\-\s]{7,}">
+              <em class="field__error">Please enter a valid phone number.</em>
+            </label>
+          </div>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="you@email.com">
+            <em class="field__error">Please enter a valid email.</em>
+          </label>
+          <div class="form__row">
+            <label class="field">
+              <span>Vehicle Type *</span>
+              <select name="vehicle" required>
+                <option value="">Select vehicle</option>
+                <option>Hatchback</option>
+                <option>Sedan</option>
+                <option>SUV / Crossover</option>
+                <option>Luxury / Sports</option>
+                <option>Pickup / Van</option>
+                <option>Fleet (multiple vehicles)</option>
+              </select>
+              <em class="field__error">Please choose a vehicle type.</em>
+            </label>
+            <label class="field">
+              <span>Service *</span>
+              <select name="service" id="bookingService" required>
+                <option value="">Select service</option>
+                <optgroup label="Services">
+                  <option>Exterior Foam Wash</option>
+                  <option>Hand Wash &amp; Dry</option>
+                  <option>Interior Deep Clean</option>
+                  <option>Paint Correction</option>
+                  <option>Wheel &amp; Tyre Care</option>
+                  <option>Ceramic Coating</option>
+                  <option>Fleet Care Program</option>
+                </optgroup>
+              </select>
+              <em class="field__error">Please choose a service.</em>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="field">
+              <span>Preferred Date *</span>
+              <input type="date" name="date" id="bookingDate" required>
+              <em class="field__error">Please pick a date from today onwards.</em>
+            </label>
+            <label class="field">
+              <span>Time Slot *</span>
+              <select name="time" required>
+                <option value="">Select time</option>
+                <option>08:00 – 10:00</option>
+                <option>10:00 – 12:00</option>
+                <option>12:00 – 14:00</option>
+                <option>14:00 – 16:00</option>
+                <option>16:00 – 18:00</option>
+                <option>18:00 – 20:00</option>
+              </select>
+              <em class="field__error">Please choose a time slot.</em>
+            </label>
+          </div>
+          <label class="field">
+            <span>Notes</span>
+            <textarea name="notes" rows="3" placeholder="Anything we should know? (pet hair, stains, pick-up address…)"></textarea>
+          </label>
+          <button class="btn btn--primary btn--block" type="submit">
+            <span class="btn__label">Confirm Booking</span> <svg class="icon"><use href="#i-arrow-right"/></svg>
+          </button>
+          <p class="form__status" id="bookingStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="booking-success" id="bookingSuccess" hidden>
+        <div class="booking-success__icon"><svg class="icon"><use href="#i-check"/></svg></div>
+        <h2>Booking Request <span class="text-red">Received!</span></h2>
+        <p id="bookingSuccessText">We'll confirm your slot shortly.</p>
+        <dl class="booking-success__summary" id="bookingSummary"></dl>
+        <button class="btn btn--primary" type="button" data-close-modal>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video modal -->
+  <div class="modal modal--media" id="videoModal" aria-hidden="true">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--media" role="dialog" aria-modal="true" aria-label="Studio video">
+      <button class="modal__close" type="button" aria-label="Close video" data-close-modal><svg class="icon"><use href="#i-close"/></svg></button>
+      <!-- Replace with your own promo video -->
+      <video id="modalVideo" controls playsinline preload="none" poster="assets/images/hero.jpg">
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- Gallery lightbox -->
+  <div class="modal modal--media" id="lightbox" aria-hidden="true">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--media lightbox" role="dialog" aria-modal="true" aria-label="Gallery viewer">
+      <button class="modal__close" type="button" aria-label="Close gallery" data-close-modal><svg class="icon"><use href="#i-close"/></svg></button>
+      <div class="compare compare--large" id="lightboxCompare"></div>
+      <div class="lightbox__bar">
+        <button class="round-btn" type="button" id="lbPrev" aria-label="Previous image"><svg class="icon"><use href="#i-arrow-left"/></svg></button>
+        <p><span id="lbCount">1 / 6</span><strong id="lbTitle"></strong></p>
+        <button class="round-btn round-btn--red" type="button" id="lbNext" aria-label="Next image"><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
